@@ -1,0 +1,24 @@
+name: ai-zipper
+host: 0.0.0.0
+port: 9000
+
+auth:
+  type: token
+  token: SECRET
+
+bridge:
+  ai:
+    server:
+      addr: localhost:9000
+      provider: openai
+
+    providers:
+      azopenai:
+        api_endpoint: https://<DEPLOYMENT_NAME>.openai.azure.com
+        deployment_id: <MODEL_NAME>
+        api_key: <API_KEY>
+        api_version: 2024-02-15-preview
+
+      openai:
+        api_key: sk-
+        model: gpt-4o
